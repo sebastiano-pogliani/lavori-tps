@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>Confusione - 100 numeri</title>
+    </head>
+    <body>
+        <div id="confused"></div>
+        <div id="stuff"></div>
+        <div id="medium"></div>
+
+        <script>
+            const confusion = []
+            
+                for (let i = 0; i < 100; i++) {
+                    if(Math.floor(Math.random()*2+1) == 1){
+                confusion.push((Math.floor(Math.random()*101))*-1);
+                    }else{
+                confusion.push(Math.floor(Math.random()*101));
+                    }
+            }
+
+            var max = -3000
+            var min = 100
+            var media = 0
+
+            for (let i = 0; i < 100; i++) {
+                    if(confusion[i] > max){
+                        max = confusion[i]
+            }
+        }
+
+        for (let i = 0; i < 100; i++) {
+                    if(confusion[i] < min){
+                        min = confusion[i]
+            }
+        }
+
+        for (let i = 0; i < 100; i++) {
+            media += confusion[i]
+        }
+        media /= 100
+
+                document.getElementById("confused").innerHTML = confusion
+                document.getElementById("stuff").innerHTML = "il Numero massimo è " + max + " e il Numero Minimo è " + min
+                document.getElementById("medium").innerHTML = "la media dei numeri è " + media
+
+
+            
+            
+        </script>
+    </body>
+</html>
