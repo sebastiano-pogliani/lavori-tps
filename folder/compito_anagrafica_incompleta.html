@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>The Unreachable Star</title>
+    </head>
+    <body>
+        <p>nome:</p>
+        <input type="text" id="name">
+        <p>cognome:</p>
+        <input type="text" id="surname">
+        <p>età:</p>
+        <input type="number" id="age">
+        <p>sesso:</p>
+        <input type="radio" id="male" name="sex" value="M">
+        <label for="male">M</label><br>
+        <input type="radio" id="female" name="sex" value="F">
+        <label for="female">F</label><br>
+        <input type="radio" id="other" name="sex" value="A">
+        <label for="other">Altro</label><br>
+        <p>veicoli posseduti:</p>
+        <input type="checkbox" id="v1" name="car" value="moto">
+        <label for="v1">moto</label><br>
+        <input type="checkbox" id="v2" name="car" value="carrozza">
+        <label for="v2">carrozza</label><br>
+        <input type="checkbox" id="v3" name="car" value="macchina">
+        <label for="v3">macchina</label><br>
+        <input type="checkbox" id="v4" name="car" value="barca">
+        <label for="v4">barca</label><br>
+        <input type="checkbox" id="v5" name="car" value="aereo">
+        <label for="v5">aereo</label><br>
+        <input type="checkbox" id="v6" name="car" value="razzo">
+        <label for="v6">razzo</label><br>
+        <p>indirizzo:</p>
+        <input type="text" id="address">
+        <p>città:</p>
+        <input type="text" id="city">
+
+
+
+        <input type="button" value="Invia" onclick="print()">
+
+        <div id="joker"></div>
+                <script>
+
+
+
+                    function print(){
+                        let sesso
+                        let veicoli = ": "
+                        for(i = 0; document.getElementsByName("car").length > i; i++){
+                            if(document.getElementsByName("car")[i].checked){
+                                veicoli += document.getElementByName("car")[i].value + ","
+                            }
+                        }
+                        if(veicoli == ": "){
+                            veicoli = "nessuno"
+                        }
+
+                        for(i = 0; document.getElementsByName("sex").length > i; i++){
+                            if(document.getElementsByName("sex")[i].checked){
+                                sesso = document.getElementsByName("sex")[i].value
+                            }
+                        }
+                    const ego = new Map()
+                        ego.set("nome", document.getElementById("name").value)
+                        ego.set("cognome", document.getElementById("surname").value)
+                        ego.set("eta", document.getElementById("age").value)
+                        ego.set("sesso", sesso)
+                        ego.set("veicoli", veicoli)
+                        ego.set("indirizzo", document.getElementById("address").value)
+                        ego.set("citta", document.getElementById("city").value)
+
+                        document.getElementById("joker").innerHTML = "Nome: " + ego.get("nome") + ", Cognome: " + ego.get("cognome") + ", Età: " + ego.get("eta") + ", Sesso: " + ego.get("sesso") + ", Veicoli posseduti: " + ego.get(veicoli)  + "   Indirizzo: " + ego.get("indirizzo") + ", Città " + ego.get("citta") 
+                    }
+
+        </script>
+    </body>
+</html>
