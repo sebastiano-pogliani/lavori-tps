@@ -1,0 +1,30 @@
+<html>
+<head></head>
+<body>
+
+<canvas id="myCanvas" width="300" height="300"></canvas>
+
+<script>
+const canvas = document.getElementById("myCanvas");
+const stella = canvas.getContext("2d");
+
+stella.beginPath();
+
+
+stella.arc(150, 150, 150, 0, 2 * Math.PI);
+
+stella.moveTo(40,250);
+
+stella.lineTo(150,0);
+stella.lineTo(260,250);
+stella.lineTo(10,100);
+stella.lineTo(290,100);
+stella.lineTo(40,250);
+
+
+
+stella.stroke();
+</script>
+
+</body>
+</html>
