@@ -48,7 +48,7 @@
                         let veicoli = ": "
                         for(i = 0; document.getElementsByName("car").length > i; i++){
                             if(document.getElementsByName("car")[i].checked){
-                                veicoli += document.getElementByName("car")[i].value + ","
+                                veicoli += document.getElementsByName("car")[i].value + ","
                             }
                         }
                         if(veicoli == ": "){
