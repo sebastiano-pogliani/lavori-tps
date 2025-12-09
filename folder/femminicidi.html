@@ -1,0 +1,35 @@
+<html>
+<body>
+<h1>Femminicidi</h1>
+
+<canvas id="myCanvas" width="550" height="500" style="border:1px solid black;"></canvas>
+
+<h3>Anno: 2024</h3>
+
+<script>
+const canvas = document.getElementById("myCanvas");
+
+const dati = [11, 9, 10, 10, 11, 13, 14, 13, 9, 10, 13, 13];
+
+const graph = canvas.getContext("2d");
+const halfway = canvas.getContext("2d");
+
+halfway.beginPath();
+halfway.moveTo(0, 250);
+halfway.lineTo(550, 250);
+halfway.strokeStyle = "red";
+halfway.lineWidth = 2;
+halfway.stroke();
+
+graph.beginPath();
+graph.moveTo(0, 500);
+
+for(let i=0; i<dati.length; i++) {
+   graph.lineTo(i*50,550-dati[i]*25);
+}
+graph.strokeStyle = "black";
+graph.stroke();
+
+</script>
+</body>
+</html>
