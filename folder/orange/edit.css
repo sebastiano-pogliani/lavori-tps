@@ -9,6 +9,10 @@ h1{
     max-height: 50px;
 }
 
+#name{
+    font-size: large;
+}
+
 body{
     background-color: rgb(255, 237, 214);
 }
