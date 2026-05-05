@@ -11,8 +11,17 @@ h1{
 
 #name{
     font-size: large;
+    align-self: center;
 }
 
 body{
     background-color: rgb(255, 237, 214);
+}
+
+#L{
+    font-size: 40%
+}
+
+#nome{
+    font-size:larger;
 }
