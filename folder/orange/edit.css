@@ -5,5 +5,6 @@ h1{
 }
 
 #logo{
-    size:2cm;
+    width:auto*0.5;
+    height:auto*0.5;
 }
