@@ -3,6 +3,14 @@
         <title>OrangeNotes - EDIT</title>
         <link rel="icon" type="image/x-icon" href="images/favicon.ico">
         <link rel="stylesheet" href="edit.css">
+        <script>
+            const info = new Map();
+
+
+            function register(){
+                info.set("Nome", document.getElementById("name"))
+            }
+        </script>
     </head>
     <body>
         <div id="L">
@@ -12,7 +20,12 @@
         <br>
         <div id="Nome">
             <label for="name">Nome</label>
-        <input id="name" type="text" name="name" maxlength="20">
+            <input id="name" type="text" name="name" maxlength="20">
+        </div>
+
+        <div id="Descrizione">
+            <label for="description">Descrizione</label>
+            <textarea name="Descrizione" id="description" rows="5" cols="50"></textarea>
         </div>
         
     </body>
