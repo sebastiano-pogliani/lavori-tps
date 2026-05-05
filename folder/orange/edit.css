@@ -19,9 +19,9 @@ body{
 }
 
 #L{
-    font-size: 40%
+    size:5ch;
 }
 
 #nome{
-    font-size:larger;
+    size: 5cm;
 }
