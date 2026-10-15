@@ -1,0 +1,14 @@
+[
+    {
+        "nome" : "Andrea",
+        "cognome" : "Contesi",
+         "eta" : "19",
+        "sport":[
+            {
+            "tipo1" : "calcio",
+            "tipo2" : "tennis"
+            }
+                
+        ]
+    }
+]
