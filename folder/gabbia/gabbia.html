@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Gabbia</title>
+        <link rel="stylesheet" href="gabbia.css">
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td class="info">Nome</td>
+                <td class="info">Cognome</td>
+                <td class="info">Eta</td>
+                <td class="info">Sport</td>
+            </tr>
+            <tr>
+                <td id="tbl1">Generic</td>
+                <td id="tbl2">Generic</td>
+                <td id="tbl3">Generic</td>
+                <td id="tbl4">Generic</td>
+            </tr>
+        </table><br>
+        <button onclick="startCode()">Click</button>
+        <script>
+            let xmlhttp = new XMLHttpRequest();
+            xmlhttp.open("GET", "persone.json", true);
+            xmlhttp.send();
+            function startCode(){
+                if(this.readyState == 4 && this.status == 200){
+                    let json = JSON.parse(this.responseText);
+                    document.getElementById("tbl1").innerHTML = json[0].nome;
+                    document.getElementById("tbl2").innerHTML = json[0].cognome;
+                    document.getElementById("tbl3").innerHTML = json[0].eta;
+                    document.getElementById("tbl4").innerHTML = json[0].sport;
+                }
+            } 
+        </script>
+    </body>
+</html>
