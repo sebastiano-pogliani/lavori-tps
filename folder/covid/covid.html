@@ -1,1 +1,27 @@
-
+<html>
+    <head>
+        <title>Tabella dati covid</title>
+    </head>
+    <body>
+        <table id="table" style="border-style: solid;"></table>
+    <script>
+    let tabler="";
+    let xmlhttp = new XMLHttpRequest();
+    xmlhttp.open("GET", "https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-json/dpc-covid19-ita-andamento-nazionale.json", true);
+    xmlhttp.send();
+    xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        let jsonFile = JSON.parse(this.responseText);
+        tabler += "<tr><td>Data</td><td>Stato</td><td>Decessi</td></tr>";
+        for(let i = 0; i < jsonFile.length; i++){
+            tabler += "<tr>";
+            tabler += "<td>" + jsonFile[i].data + "</td><td>" + jsonFile[i].stato + "</td></td>" + jsonFile[i].deceduti + "</td>";
+            tabler += "</tr>";
+        }
+        document.getElementById("table").innerHTML = tabler;
+      }
+};
+  
+</script>
+    </body>
+</html>
