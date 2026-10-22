@@ -1,6 +1,11 @@
 <html>
     <head>
         <title>Tabella dati covid</title>
+        <style>
+            td, tr{
+                border-style: dashed;
+            }
+        </style>
     </head>
     <body>
         <table id="table" style="border-style: solid;"></table>
@@ -15,7 +20,7 @@
         tabler += "<tr><td>Data</td><td>Stato</td><td>Decessi</td></tr>";
         for(let i = 0; i < jsonFile.length; i++){
             tabler += "<tr>";
-            tabler += "<td>" + jsonFile[i].data + "</td><td>" + jsonFile[i].stato + "</td></td>" + jsonFile[i].deceduti + "</td>";
+            tabler += "<td>" + jsonFile[i].data + "</td><td>" + jsonFile[i].stato + "</td><td>" + jsonFile[i].deceduti + "</td>";
             tabler += "</tr>";
         }
         document.getElementById("table").innerHTML = tabler;
