@@ -14,7 +14,7 @@
 
         let stampa="";
         let xmlhttp = new XMLHttpRequest();
-        xmlhttp.open("GET", "https://classroom.google.com/u/0/c/NzM1MjY4MTE3MTIz/a/OTAwNDAzMDkyOTY2/details", true);
+        xmlhttp.open("GET", "esercizi/ww1/dati1GM.json", true);
         xmlhttp.send();
         xmlhttp.onreadystatechange = function() {
           if (this.readyState == 4 && this.status == 200) {
