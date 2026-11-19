@@ -1,0 +1,139 @@
+
+{
+  "prima_guerra_mondiale": {
+    "date": {
+      "inizio_guerra": "28 luglio 1914",
+      "attentato_sarajevo": "28 giugno 1914",
+      "ingresso_italia": "24 maggio 1915",
+      "ingresso_stati_uniti": "6 aprile 1917",
+      "fine_guerra": "11 novembre 1918",
+      "trattato_versailles": "28 giugno 1919"
+    },
+    "statistiche_generali": {
+      "soldati_mobilitati": 65038810,
+      "soldati_morti": 8528831,
+      "soldati_feriti": 21189154,
+      "prigionieri_e_dispersi": 7750919,
+      "morti_civili_stimati": 13000000,
+      "totale_morti_stimato": 21500000
+    },
+    "paesi": [
+      {
+        "nome": "Germania",
+        "alleanza": "Potenze centrali",
+        "soldati_mobilitati": 11000000,
+        "morti": 1773700,
+        "feriti": 4216058,
+        "prigionieri_dispersi": 1152800
+      },
+      {
+        "nome": "Francia",
+        "alleanza": "Intesa",
+        "soldati_mobilitati": 8410000,
+        "morti": 1357800,
+        "feriti": 4266000,
+        "prigionieri_dispersi": 537000
+      },
+      {
+        "nome": "Russia",
+        "alleanza": "Intesa",
+        "soldati_mobilitati": 12000000,
+        "morti": 1700000,
+        "feriti": 4950000,
+        "prigionieri_dispersi": 2500000
+      },
+      {
+        "nome": "Italia",
+        "alleanza": "Intesa",
+        "soldati_mobilitati": 5615000,
+        "morti": 650000,
+        "feriti": 947000,
+        "prigionieri_dispersi": 600000
+      },
+      {
+        "nome": "Regno Unito e Impero britannico",
+        "alleanza": "Intesa",
+        "soldati_mobilitati": 8904467,
+        "morti": 908371,
+        "feriti": 2090212,
+        "prigionieri_dispersi": 191652
+      },
+      {
+        "nome": "Austria-Ungheria",
+        "alleanza": "Potenze centrali",
+        "soldati_mobilitati": 7800000,
+        "morti": 1200000,
+        "feriti": 3620000,
+        "prigionieri_dispersi": 2200000
+      },
+      {
+        "nome": "Stati Uniti",
+        "alleanza": "Intesa",
+        "soldati_mobilitati": 4355000,
+        "morti": 116516,
+        "feriti": 204002,
+        "prigionieri_dispersi": 4500
+      },
+      {
+        "nome": "Impero Ottomano",
+        "alleanza": "Potenze centrali",
+        "soldati_mobilitati": 2850000,
+        "morti": 325000,
+        "feriti": 400000,
+        "prigionieri_dispersi": 250000
+      },
+      {
+        "nome": "Bulgaria",
+        "alleanza": "Potenze centrali",
+        "soldati_mobilitati": 1200000,
+        "morti": 87500,
+        "feriti": 152390,
+        "prigionieri_dispersi": 27029
+      }
+    ],
+    "battaglie_e_date": [
+      {
+        "nome": "Battaglia della Marna",
+        "inizio": "6 settembre 1914",
+        "fine": "12 settembre 1914"
+      },
+      {
+        "nome": "Battaglia di Verdun",
+        "inizio": "21 febbraio 1916",
+        "fine": "18 dicembre 1916"
+      },
+      {
+        "nome": "Battaglia della Somme",
+        "inizio": "1 luglio 1916",
+        "fine": "18 novembre 1916"
+      },
+      {
+        "nome": "Battaglia di Caporetto",
+        "inizio": "24 ottobre 1917",
+        "fine": "19 novembre 1917"
+      },
+      {
+        "nome": "Battaglia di Vittorio Veneto",
+        "inizio": "24 ottobre 1918",
+        "fine": "4 novembre 1918"
+      }
+    ],
+    "conseguenze": {
+      "imperi_scomparsi": [
+        "Impero tedesco",
+        "Impero austro-ungarico",
+        "Impero russo",
+        "Impero ottomano"
+      ],
+      "nuovi_stati": [
+        "Polonia",
+        "Cecoslovacchia",
+        "Austria",
+        "Ungheria",
+        "Jugoslavia"
+      ],
+      "trattato_di_pace": "Trattato di Versailles",
+      "anno_trattato": 1919
+    }
+  }
+}
