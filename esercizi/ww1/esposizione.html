@@ -1,8 +1,34 @@
 <html>
     <head>
         <title>Esposizione Dati WW1</title>
+        <style>
+        table, th, td {
+            border: 1px solid black;
+            border-style: inset;
+        }
+        </style>
     </head>
     <body>
-        
+        <table id="table" style="border-style: inset;"></table>
+        <script>
+
+        let stampa="";
+        let xmlhttp = new XMLHttpRequest();
+        xmlhttp.open("GET", "https://classroom.google.com/u/0/c/NzM1MjY4MTE3MTIz/a/OTAwNDAzMDkyOTY2/details", true);
+        xmlhttp.send();
+        xmlhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+              let myObj = JSON.parse(this.responseText);
+              stampa = "<tr><td>evento</td><td></td><td></td><td></td><td></td><td></td></tr>";
+              for (y in myObj.evento) {
+                stampa += "<tr>";
+                stampa += "<td>" + myObj.evento[y].nome +  "</td>" + "<td>" + myObj.evento[y].inizio +  "</td>" +"<td>" + myObj.evento[y].fine +  "</td>" +"<td>" + myObj.evento[y].durata +  "</td>" +"<td>" + myObj.evento[y].causa_immediata +  "</td>"+"<td>" + myObj.evento[y].luogo +  "</td>"; 
+                stampa += "</tr>";
+              }
+            document.getElementById("table").innerHTML = stampa;
+          }
+        };
+        </script>
+
     </body>
 </html>
