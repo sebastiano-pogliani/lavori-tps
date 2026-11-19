@@ -6,5 +6,22 @@
         <select name="morti" id="morti_box">
   
         </select>
+        <script>
+            let boxer="";
+            let xmlhttp = new XMLHttpRequest();
+            xmlhttp.open("GET", "https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-json/dpc-covid19-ita-andamento-nazionale.json", true);
+            xmlhttp.send();
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    let jsonFile = JSON.parse(this.responseText);
+                    for(let i = 0; i < jsonFile.length; i++){
+                        boxer += "<option value=";
+                        boxer += jsonFile.prima_guerra_mondiale.paesi[i].nome + ">" + jsonFile.prima_guerra_mondiale.paesi[i].nome;
+                        boxer += "</option>";
+                    }
+                document.getElementById("morti_box").innerHTML = boxer;
+                }
+            };
+        </script>
     </body>
 </html>
