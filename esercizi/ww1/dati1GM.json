@@ -1,0 +1,105 @@
+{
+  "evento": {
+    "nome": "Prima Guerra Mondiale",
+    "inizio": "28 luglio 1914",
+    "fine": "11 novembre 1918",
+    "durata": "4 anni, 3 mesi e 14 giorni",
+    "causa_immediata": "Assassinio dell'arciduca Francesco Ferdinando",
+    "luogo": "Europa, Africa, Asia e Medio Oriente"
+  },
+  "alleanze": {
+    "triplice_intesa": [
+      "Francia",
+      "Regno Unito",
+      "Russia",
+      "Italia (dal 1915)",
+      "Stati Uniti (dal 1917)"
+    ],
+    "potenze_centrali": [
+      "Germania",
+      "Austria-Ungheria",
+      "Impero Ottomano",
+      "Bulgaria"
+    ]
+  },
+  "battaglie_principali": [
+    {
+      "nome": "Battaglia della Marna",
+      "anno": 1914,
+      "luogo": "Francia",
+      "risultato": "Arresto dell'avanzata tedesca"
+    },
+    {
+      "nome": "Battaglia di Verdun",
+      "anno": 1916,
+      "luogo": "Francia",
+      "risultato": "Vittoria difensiva francese"
+    },
+    {
+      "nome": "Battaglia della Somme",
+      "anno": 1916,
+      "luogo": "Francia",
+      "risultato": "Gravissime perdite per entrambi gli schieramenti"
+    },
+    {
+      "nome": "Battaglia di Caporetto",
+      "anno": 1917,
+      "luogo": "Italia",
+      "risultato": "Sconfitta italiana contro gli austro-tedeschi"
+    },
+    {
+      "nome": "Battaglia di Vittorio Veneto",
+      "anno": 1918,
+      "luogo": "Italia",
+      "risultato": "Vittoria italiana contro l'Austria-Ungheria"
+    }
+  ],
+  "personaggi_storici": [
+    {
+      "nome": "Guglielmo II",
+      "ruolo": "Imperatore tedesco"
+    },
+    {
+      "nome": "Francesco Giuseppe I",
+      "ruolo": "Imperatore austro-ungarico fino al 1916"
+    },
+    {
+      "nome": "Vittorio Emanuele III",
+      "ruolo": "Re d'Italia"
+    },
+    {
+      "nome": "Vittorio Emanuele Orlando",
+      "ruolo": "Presidente del Consiglio italiano"
+    },
+    {
+      "nome": "Woodrow Wilson",
+      "ruolo": "Presidente degli Stati Uniti"
+    }
+  ],
+  "caratteristiche": [
+    "Guerra di trincea",
+    "Utilizzo di mitragliatrici",
+    "Impiego di carri armati",
+    "Utilizzo di aerei militari",
+    "Uso di armi chimiche",
+    "Sottomarini e guerra navale"
+  ],
+  "conseguenze": {
+    "vittime": "Circa 15-20 milioni tra militari e civili",
+    "trattato_di_versailles": "28 giugno 1919",
+    "imperi_crollati": [
+      "Impero tedesco",
+      "Impero austro-ungarico",
+      "Impero russo",
+      "Impero ottomano"
+    ],
+    "nuovi_stati": [
+      "Polonia",
+      "Cecoslovacchia",
+      "Austria",
+      "Ungheria",
+      "Jugoslavia"
+    ],
+    "conseguenza_storica": "Creazione delle condizioni che contribuirono allo scoppio della Seconda Guerra Mondiale"
+  }
+}
