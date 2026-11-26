@@ -17,6 +17,7 @@
                     for(let i = 0; i < jsonFile.length; i++){
                         boxer += "<option value=";
                         boxer += jsonFile.prima_guerra_mondiale.paesi[i].nome + ">" + jsonFile.prima_guerra_mondiale.paesi[i].nome;
+                        allert(jsonFile.prima_guerra_mondiale.paesi[i].nome);
                         boxer += "</option>";
                     }
                 document.getElementById("morti_box").innerHTML = boxer;
