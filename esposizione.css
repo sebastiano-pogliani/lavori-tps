@@ -1,0 +1,9 @@
+p{
+    width: 30%;
+    border-style: dotted;
+    border-color: black;
+    border-style: solid;
+    border-width: 2px;
+    padding: 5px;
+    background-color: rgb(202, 189, 189);
+}
