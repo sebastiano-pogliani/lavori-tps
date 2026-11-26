@@ -3,26 +3,44 @@
         <title>Esposizione Dati WW1</title>
     </head>
     <body>
-        <select name="morti" id="morti_box">
-  
-        </select>
+        <select name="morti" id="morti_box"></select>
+        <button onclick="morti()">Mostra Morti</button><br><br>
+        <p id="infopoint"></p>
         <script>
             let boxer="";
             let xmlhttp = new XMLHttpRequest();
             xmlhttp.open("GET", "jsons/morti1GM.json", true);
             xmlhttp.send();
+            let openJson;
             xmlhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
                     let jsonFile = JSON.parse(this.responseText);
-                    for(let i = 0; i < jsonFile.length; i++){
+                    openJson = jsonFile;
+                    for(let i = 0; i < jsonFile.prima_guerra_mondiale.paesi.length; i++){
                         boxer += "<option value=";
-                        boxer += jsonFile.prima_guerra_mondiale.paesi[i].nome + ">" + jsonFile.prima_guerra_mondiale.paesi[i].nome;
-                        allert(jsonFile.prima_guerra_mondiale.paesi[i].nome);
+                        boxer += jsonFile.prima_guerra_mondiale.paesi[i].nome.replaceAll(" ", "_") + ">" + jsonFile.prima_guerra_mondiale.paesi[i].nome;
                         boxer += "</option>";
                     }
                 document.getElementById("morti_box").innerHTML = boxer;
                 }
             };
+            function morti(){
+                let info="";
+                let objective = document.getElementById("morti_box").value.replaceAll(" ", "_");
+                let number = 0;
+                for(let i = 0; i < openJson.prima_guerra_mondiale.paesi.length; i++){
+                    if(openJson.prima_guerra_mondiale.paesi[i].nome.replaceAll(" ", "_") == objective){
+                        number = i;
+                    }
+                }
+                let percentuale = Number(openJson.prima_guerra_mondiale.paesi[number].morti)/Number(openJson.prima_guerra_mondiale.paesi[number].soldati_mobilitati)*100;
+                info += openJson.prima_guerra_mondiale.paesi[number].nome + "<br>";
+                info += "Numero soldati inviato: " + openJson.prima_guerra_mondiale.paesi[number].soldati_mobilitati + "<br>";
+                info += "Numero morti: " + openJson.prima_guerra_mondiale.paesi[number].morti + "<br>";
+                info += "Percentuale rispetto ai soldati inviati: " + percentuale.toFixed(2) + "%";
+                document.getElementById("infopoint").innerHTML = info;
+
+            }
         </script>
     </body>
 </html>
